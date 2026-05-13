@@ -152,8 +152,20 @@
 
   /* ============ HEADER ============ */
   .reg-header {
-    padding: 56px 0 32px;
+    padding: 48px 0 32px;
     text-align: center;
+  }
+  .reg-header-logo {
+    display: block;
+    margin: 0 auto 24px;
+    height: 130px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  @media (max-width: 540px) {
+    .reg-header { padding: 32px 0 24px; }
+    .reg-header-logo { height: 104px; margin-bottom: 18px; }
   }
   .reg-eyebrow {
     font-size: 12px;
@@ -803,6 +815,7 @@
 <div class="container">
 
   <header class="reg-header">
+    <img src="logo-cemexicano-slp.png" alt="CEMexicano San Luis Potosí" class="reg-header-logo" width="488" height="488" fetchpriority="high">
     <div class="reg-eyebrow">Registro a la comunidad</div>
     <h1>Bienvenido a <span class="accent">CEM</span> <em>Negocios SLP</em></h1>
     <p>
