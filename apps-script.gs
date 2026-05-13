@@ -67,7 +67,8 @@ function doPost(e) {
       return jsonResponse({ status: 'ok' });
     }
 
-    const required = ['nombre', 'cargo', 'email', 'whatsapp', 'tipo_miembro', 'referido_por', 'empresa', 'giro', 'oferta'];
+    const required = ['nombre', 'cargo', 'email', 'whatsapp', 'tipo_miembro', 'empresa', 'giro', 'web', 'oferta', 'cliente_ideal'];
+    if (params.tipo_miembro === 'Invitado') required.push('referido_por');
     for (const f of required) {
       if (!params[f] || String(params[f]).trim() === '') {
         return jsonResponse({ status: 'error', message: 'Falta el campo: ' + f }, 400);

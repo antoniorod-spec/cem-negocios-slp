@@ -969,10 +969,10 @@
             </div>
           </div>
 
-          <div class="field">
+          <div class="field" id="referidoField" hidden>
             <label for="referido_por">¿Quién te invitó a la comunidad?<span class="req">*</span></label>
-            <input type="text" id="referido_por" name="referido_por" required placeholder="Nombre completo o empresa de quien te refirió" maxlength="120">
-            <div class="field-hint">Obligatorio para invitados. Si no recuerdas el nombre exacto, escribe la empresa o cómo te enteraste.</div>
+            <input type="text" id="referido_por" name="referido_por" placeholder="Nombre completo o empresa de quien te refirió" maxlength="120">
+            <div class="field-hint">Si no recuerdas el nombre exacto, escribe la empresa o cómo te enteraste.</div>
           </div>
         </div>
 
@@ -995,8 +995,8 @@
               <input type="text" id="giro" name="giro" required placeholder="Construcción, contabilidad…" maxlength="80">
             </div>
             <div class="field">
-              <label for="web">Sitio web o red social <span class="optional">(opcional)</span></label>
-              <input type="text" id="web" name="web" placeholder="miempresa.com / @mi_empresa" autocomplete="url" maxlength="120">
+              <label for="web">Sitio web o red social<span class="req">*</span></label>
+              <input type="text" id="web" name="web" required placeholder="miempresa.com / @mi_empresa" autocomplete="url" maxlength="120">
             </div>
           </div>
 
@@ -1007,8 +1007,8 @@
           </div>
 
           <div class="field">
-            <label for="cliente_ideal">¿Qué cliente buscas? <span class="optional">(opcional)</span></label>
-            <textarea id="cliente_ideal" name="cliente_ideal" placeholder="Ej: Constructoras con obra activa, empresas de 50+ empleados, restaurantes…" maxlength="600"></textarea>
+            <label for="cliente_ideal">¿Qué cliente buscas?<span class="req">*</span></label>
+            <textarea id="cliente_ideal" name="cliente_ideal" required placeholder="Ej: Constructoras con obra activa, empresas de 50+ empleados, restaurantes…" maxlength="600"></textarea>
           </div>
         </div>
 
@@ -1088,17 +1088,26 @@
   const radioInvitado = document.getElementById('radioInvitado');
   const radioAfiliadoInput = radioAfiliado.querySelector('input');
   const radioInvitadoInput = radioInvitado.querySelector('input');
+  const referidoField = document.getElementById('referidoField');
+  const referidoInput = document.getElementById('referido_por');
 
   function updateRadios() {
     if (radioAfiliadoInput.checked) {
       radioAfiliado.classList.add('selected');
       radioInvitado.classList.remove('selected');
+      referidoField.hidden = true;
+      referidoInput.required = false;
+      referidoInput.value = '';
     } else if (radioInvitadoInput.checked) {
       radioInvitado.classList.add('selected');
       radioAfiliado.classList.remove('selected');
+      referidoField.hidden = false;
+      referidoInput.required = true;
     } else {
       radioAfiliado.classList.remove('selected');
       radioInvitado.classList.remove('selected');
+      referidoField.hidden = true;
+      referidoInput.required = false;
     }
   }
   radioAfiliado.addEventListener('click', () => { radioAfiliadoInput.checked = true; updateRadios(); });
