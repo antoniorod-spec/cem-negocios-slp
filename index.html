@@ -5,8 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#0A2A5E">
-<title>CEM Negocios — Registro de miembro</title>
-<meta name="description" content="Grupo exclusivo de ventas y promociones para afiliados de CEMexicano San Luis Potosí.">
+<title>CEM Negocios SLP — Registro a la comunidad</title>
+<meta name="description" content="Comunidad de WhatsApp exclusiva para afiliados al CEMexicano San Luis Potosí. Impulsa ventas, promociones, servicios, eventos, capacitaciones y recomendaciones entre la red empresarial.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://negocios.cemexicanoslp.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://negocios.cemexicanoslp.com/">
+<meta property="og:site_name" content="CEM Negocios SLP">
+<meta property="og:title" content="CEM Negocios SLP — Registro a la comunidad">
+<meta property="og:description" content="Comunidad de WhatsApp exclusiva para afiliados al CEMexicano San Luis Potosí.">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CEM Negocios SLP — Registro a la comunidad">
+<meta name="twitter:description" content="Comunidad de WhatsApp exclusiva para afiliados al CEMexicano San Luis Potosí.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -308,6 +320,75 @@
     font-size: 11px;
     font-weight: 700;
     margin-bottom: 6px;
+  }
+
+  /* ============ ADMINS / REVISIÓN ============ */
+  .review-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--navy);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 56px;
+  }
+  .review-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .review-card-icon {
+    width: 40px; height: 40px;
+    background: rgba(10, 42, 94, 0.08);
+    border-radius: 10px;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .review-card-icon svg {
+    width: 20px; height: 20px;
+    stroke: var(--navy);
+    fill: none;
+    stroke-width: 2;
+  }
+  .review-card h3 {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .review-card > p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .admins-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 24px;
+    padding: 18px 20px;
+    background: var(--bg-soft);
+    border-radius: 10px;
+    list-style: none;
+  }
+  @media (max-width: 540px) {
+    .admins-list { grid-template-columns: 1fr; }
+    .review-card { padding: 22px 20px; }
+  }
+  .admins-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .admin-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--blue);
+    flex-shrink: 0;
   }
 
   /* ============ DIVIDER ============ */
@@ -711,8 +792,8 @@
       </div>
       <div class="brand-divider"></div>
       <div class="brand-product">
-        <div class="label">Grupo</div>
-        <div class="name">CEM Negocios</div>
+        <div class="label">Comunidad</div>
+        <div class="name">CEM Negocios SLP</div>
       </div>
     </div>
     <div class="invite-tag">Invitado</div>
@@ -722,11 +803,12 @@
 <div class="container">
 
   <header class="reg-header">
-    <div class="reg-eyebrow">Registro al grupo</div>
-    <h1>Bienvenido a <span class="accent">CEM</span> <em>Negocios</em></h1>
+    <div class="reg-eyebrow">Registro a la comunidad</div>
+    <h1>Bienvenido a <span class="accent">CEM</span> <em>Negocios SLP</em></h1>
     <p>
-      El grupo exclusivo de ventas y promociones para afiliados al CEMexicano.
-      Promueve tus servicios, pide y da recomendaciones entre la red empresarial de San Luis.
+      La comunidad de WhatsApp exclusiva para afiliados al CEMexicano. Impulsa ventas,
+      promociones, servicios, eventos, talleres y capacitaciones; pide y da recomendaciones
+      entre la red empresarial de San Luis Potosí.
     </p>
   </header>
 
@@ -737,11 +819,11 @@
       <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
     </div>
     <div class="purpose-card-content">
-      <h3>La finalidad del grupo</h3>
+      <h3>La finalidad de la comunidad</h3>
       <p>
         Promover los servicios y productos que ofrecemos como afiliados, así como pedir
         y dar recomendaciones entre nosotros. Es un espacio <strong>exclusivo de negocios</strong>,
-        no un canal social.
+        <strong>no un canal social</strong>.
       </p>
     </div>
   </div>
@@ -750,8 +832,8 @@
 
   <section class="rules-section">
     <div class="rules-header">
-      <div class="rules-eyebrow">Reglas del grupo</div>
-      <h2>Cuatro reglas para que el grupo funcione</h2>
+      <div class="rules-eyebrow">Reglas de la comunidad</div>
+      <h2>Cuatro reglas para que la comunidad funcione</h2>
     </div>
 
     <div class="rules-grid">
@@ -760,7 +842,7 @@
         <div class="rule-card-num">1</div>
         <div class="rule-card-content">
           <h3>Horario de publicaciones</h3>
-          <p>De <strong>8:00 a 21:00 horas</strong>. Fuera de ese horario el grupo descansa.</p>
+          <p>De <strong>8:00 a 21:00 horas</strong>. Fuera de ese horario la comunidad descansa.</p>
         </div>
       </article>
 
@@ -776,7 +858,7 @@
         <div class="rule-card-num">3</div>
         <div class="rule-card-content">
           <h3>Solo negocios</h3>
-          <p>No se permiten <strong>memes, cadenas, noticias, temas religiosos ni políticos</strong>. El grupo es exclusivo de negocios.</p>
+          <p>No se permiten <strong>memes, cadenas, noticias, temas religiosos ni políticos</strong>. Este espacio es exclusivo de negocios.</p>
         </div>
       </article>
 
@@ -792,6 +874,27 @@
     </div>
 
   </section>
+
+  <!-- REVISIÓN POR ADMINISTRADORES -->
+  <div class="review-card">
+    <div class="review-card-header">
+      <div class="review-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+      </div>
+      <h3>Tu registro pasa por revisión</h3>
+    </div>
+    <p>
+      Para participar en CEM Negocios SLP es necesario completar todo el registro. Los
+      administradores de la comunidad lo revisarán y aprobarán antes de enviarte el enlace
+      de ingreso.
+    </p>
+    <ul class="admins-list">
+      <li><span class="admin-dot"></span>Antonio Rodríguez de Tembleque Fuentes</li>
+      <li><span class="admin-dot"></span>Eduardo Ayala Morales</li>
+      <li><span class="admin-dot"></span>Federico Augusto Antonio Edmundo Cuadra Zúñiga</li>
+      <li><span class="admin-dot"></span>Luis Arturo Obregón Cervantes</li>
+    </ul>
+  </div>
 
   <div class="section-divider">
     <span>Completa tu registro</span>
@@ -814,7 +917,15 @@
     </div>
   </div>
 
-  <form id="registroForm" action="https://formspree.io/f/REEMPLAZAR_ID" method="POST">
+  <form id="registroForm" action="https://script.google.com/macros/s/AKfycbzKHptjd_QIlD0Qzs8IWZGT7xcg0WlYlNYpxKUwRvOagU1_fAUfQpbm-m2HzpoTYPkY/exec" method="POST" novalidate>
+
+    <!-- Honeypot anti-spam: humanos no lo ven, bots sí lo llenan -->
+    <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden">
+      <label>No llenar este campo
+        <input type="text" name="website_url" tabindex="-1" autocomplete="off">
+      </label>
+    </div>
+
     <div class="form-card">
       <div class="form-card-body">
 
@@ -824,27 +935,28 @@
             <div class="form-section-title-num">1</div>
             <h2>Datos del representante</h2>
           </div>
-          <p class="form-section-desc">El contacto principal de la empresa en el grupo.</p>
+          <p class="form-section-desc">El contacto principal de la empresa en la comunidad.</p>
 
           <div class="field-row">
             <div class="field">
               <label for="nombre">Nombre completo<span class="req">*</span></label>
-              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" autocomplete="name" minlength="3" maxlength="100">
             </div>
             <div class="field">
               <label for="cargo">Cargo<span class="req">*</span></label>
-              <input type="text" id="cargo" name="cargo" required placeholder="Director, fundador…">
+              <input type="text" id="cargo" name="cargo" required placeholder="Director, fundador…" autocomplete="organization-title" maxlength="80">
             </div>
           </div>
 
           <div class="field-row">
             <div class="field">
               <label for="email">Email<span class="req">*</span></label>
-              <input type="email" id="email" name="email" required placeholder="tu@empresa.com">
+              <input type="email" id="email" name="email" required placeholder="tu@empresa.com" autocomplete="email" maxlength="120" inputmode="email">
             </div>
             <div class="field">
               <label for="whatsapp">WhatsApp<span class="req">*</span></label>
-              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="444 123 4567">
+              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="444 123 4567" autocomplete="tel" inputmode="tel" pattern="[0-9\s\-\+\(\)]{10,20}">
+              <div class="field-hint">10 dígitos. Te enviaremos por aquí el enlace a la comunidad.</div>
             </div>
           </div>
 
@@ -869,16 +981,16 @@
                   <h4>Invitado</h4>
                   <span class="radio-card-tag">2 MESES</span>
                 </div>
-                <p>Aún no soy afiliado, pero quiero conocer el grupo durante el periodo de prueba.</p>
+                <p>Aún no soy afiliado, pero quiero conocer la comunidad durante el periodo de prueba.</p>
               </label>
 
             </div>
           </div>
 
           <div class="field">
-            <label for="referido_por">¿Quién te invitó al grupo?<span class="req">*</span></label>
-            <input type="text" id="referido_por" name="referido_por" required placeholder="Nombre completo o empresa de quien te refirió">
-            <div class="field-hint">Si no recuerdas el nombre exacto, escribe la empresa o cómo te enteraste.</div>
+            <label for="referido_por">¿Quién te invitó a la comunidad?<span class="req">*</span></label>
+            <input type="text" id="referido_por" name="referido_por" required placeholder="Nombre completo o empresa de quien te refirió" maxlength="120">
+            <div class="field-hint">Obligatorio para invitados. Si no recuerdas el nombre exacto, escribe la empresa o cómo te enteraste.</div>
           </div>
         </div>
 
@@ -888,33 +1000,33 @@
             <div class="form-section-title-num">2</div>
             <h2>Datos de la empresa</h2>
           </div>
-          <p class="form-section-desc">Para que el resto del grupo sepa qué ofreces.</p>
+          <p class="form-section-desc">Para que el resto de la comunidad sepa qué ofreces.</p>
 
           <div class="field">
             <label for="empresa">Nombre comercial o razón social<span class="req">*</span></label>
-            <input type="text" id="empresa" name="empresa" required placeholder="Mi Empresa S.A. de C.V.">
+            <input type="text" id="empresa" name="empresa" required placeholder="Mi Empresa S.A. de C.V." autocomplete="organization" maxlength="120">
           </div>
 
           <div class="field-row">
             <div class="field">
               <label for="giro">Giro / sector<span class="req">*</span></label>
-              <input type="text" id="giro" name="giro" required placeholder="Construcción, contabilidad…">
+              <input type="text" id="giro" name="giro" required placeholder="Construcción, contabilidad…" maxlength="80">
             </div>
             <div class="field">
               <label for="web">Sitio web o red social <span class="optional">(opcional)</span></label>
-              <input type="text" id="web" name="web" placeholder="miempresa.com / @mi_empresa">
+              <input type="text" id="web" name="web" placeholder="miempresa.com / @mi_empresa" autocomplete="url" maxlength="120">
             </div>
           </div>
 
           <div class="field">
             <label for="oferta">¿Qué ofreces? Productos o servicios principales<span class="req">*</span></label>
-            <textarea id="oferta" name="oferta" required placeholder="Ej: Venta de cemento a granel, asesoría fiscal a PyMEs, sistemas de seguridad para oficinas…"></textarea>
-            <div class="field-hint">Esto será lo que tus compañeros del grupo vean cuando pidan referidos de tu giro.</div>
+            <textarea id="oferta" name="oferta" required placeholder="Ej: Venta de cemento a granel, asesoría fiscal a PyMEs, sistemas de seguridad para oficinas…" maxlength="600"></textarea>
+            <div class="field-hint">Esto será lo que tus compañeros de la comunidad vean cuando pidan referidos de tu giro.</div>
           </div>
 
           <div class="field">
             <label for="cliente_ideal">¿Qué cliente buscas? <span class="optional">(opcional)</span></label>
-            <textarea id="cliente_ideal" name="cliente_ideal" placeholder="Ej: Constructoras con obra activa, empresas de 50+ empleados, restaurantes…"></textarea>
+            <textarea id="cliente_ideal" name="cliente_ideal" placeholder="Ej: Constructoras con obra activa, empresas de 50+ empleados, restaurantes…" maxlength="600"></textarea>
           </div>
         </div>
 
@@ -924,12 +1036,12 @@
             <div class="form-section-title-num">3</div>
             <h2>Aceptación de las reglas</h2>
           </div>
-          <p class="form-section-desc">Antes de entrar al grupo, confirma que leíste y aceptas las reglas.</p>
+          <p class="form-section-desc">Antes de entrar a la comunidad, confirma que leíste y aceptas las reglas.</p>
 
           <label class="acceptance" for="acepta_reglas" id="wrap1">
             <input type="checkbox" id="acepta_reglas" name="acepta_reglas" required value="acepto">
             <span class="acceptance-text">
-              <strong>Acepto las cuatro reglas del grupo CEM Negocios:</strong>
+              <strong>Acepto las cuatro reglas de la comunidad CEM Negocios SLP:</strong>
               respetar el horario de publicación (8:00–21:00), llevar negocios al privado,
               no publicar memes, cadenas, noticias, temas religiosos ni políticos, y entiendo
               que como invitado tengo dos meses para sumarme al CEMexicano.
@@ -940,8 +1052,8 @@
             <input type="checkbox" id="acepta_datos" name="acepta_datos" required value="acepto">
             <span class="acceptance-text">
               <strong>Autorizo el uso de mis datos.</strong> La información que comparto será
-              visible para los administradores y miembros del grupo, y se usará exclusivamente
-              para fines de operación de CEM Negocios.
+              visible para los administradores y miembros de la comunidad, y se usará
+              exclusivamente para fines de operación de CEM Negocios SLP.
             </span>
           </label>
         </div>
@@ -952,10 +1064,10 @@
             Completar registro
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <p class="submit-note">Recibirás el enlace al grupo de WhatsApp en menos de 24 horas.</p>
+          <p class="submit-note">Tu registro será revisado por los administradores de la comunidad. Recibirás el enlace al ser aprobado.</p>
 
           <div class="form-msg success" id="formSuccess">
-            <strong>¡Registro recibido!</strong> Te enviaremos el enlace al grupo de WhatsApp en menos de 24 horas.
+            <strong>¡Registro recibido!</strong> Los administradores revisarán tu información y, una vez aprobada, te enviaremos el enlace a la comunidad de WhatsApp.
           </div>
           <div class="form-msg error" id="formError">
             Algo salió mal al enviar tu registro. Por favor intenta nuevamente.
@@ -975,7 +1087,7 @@
       <div></div><div></div><div></div>
     </div>
     <div class="meta">
-      <strong>CEMexicano · San Luis Potosí</strong> · Grupo CEM Negocios
+      <strong>CEMexicano · San Luis Potosí</strong> · Comunidad CEM Negocios SLP
     </div>
   </div>
 </footer>
@@ -1002,6 +1114,9 @@
     } else if (radioInvitadoInput.checked) {
       radioInvitado.classList.add('selected');
       radioAfiliado.classList.remove('selected');
+    } else {
+      radioAfiliado.classList.remove('selected');
+      radioInvitado.classList.remove('selected');
     }
   }
   radioAfiliado.addEventListener('click', () => { radioAfiliadoInput.checked = true; updateRadios(); });
@@ -1015,50 +1130,72 @@
   cb1.addEventListener('change', updateButton);
   cb2.addEventListener('change', updateButton);
 
+  function normalizeWhatsApp(value) {
+    return (value || '').replace(/\D/g, '');
+  }
+
+  function showError(msg) {
+    errorMsg.innerHTML = msg;
+    errorMsg.classList.add('show');
+    errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     successMsg.classList.remove('show');
     errorMsg.classList.remove('show');
 
-    const formData = new FormData(form);
-    const action = form.getAttribute('action');
-
-    if (action.includes('REEMPLAZAR_ID')) {
-      console.log('Datos del registro (modo demo):', Object.fromEntries(formData.entries()));
-      successMsg.innerHTML = '<strong>Modo demo activo.</strong> Configura tu ID de Formspree en el atributo action del &lt;form&gt; para recibir los registros por email.';
-      successMsg.classList.add('show');
-      form.reset();
-      updateButton();
-      updateRadios();
-      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (!form.checkValidity()) {
+      form.reportValidity();
       return;
     }
+
+    const tel = normalizeWhatsApp(document.getElementById('whatsapp').value);
+    if (tel.length < 10) {
+      showError('El WhatsApp debe tener al menos <strong>10 dígitos</strong>.');
+      return;
+    }
+
+    const formData = new FormData(form);
+    formData.set('whatsapp', tel);
+    formData.set('fecha_registro', new Date().toISOString());
+    formData.set('user_agent', navigator.userAgent);
+    formData.set('referrer', document.referrer || '');
+
+    const action = form.getAttribute('action');
 
     submitBtn.disabled = true;
     const originalBtn = submitBtn.innerHTML;
     submitBtn.innerHTML = 'Enviando…';
 
     try {
+      // Apps Script web app: FormData = simple request, sin preflight CORS.
       const response = await fetch(action, {
         method: 'POST',
         body: formData,
-        headers: { 'Accept': 'application/json' }
+        redirect: 'follow'
       });
 
-      if (response.ok) {
+      // Apps Script puede responder text/plain. Intentamos JSON, si falla asumimos OK por response.ok.
+      let data = null;
+      try { data = await response.clone().json(); } catch (_) {}
+
+      const ok = response.ok && (!data || data.status !== 'error');
+
+      if (ok) {
         successMsg.classList.add('show');
         form.reset();
         updateButton();
-        radioAfiliado.classList.remove('selected');
-        radioInvitado.classList.remove('selected');
+        updateRadios();
         successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        submitBtn.innerHTML = originalBtn;
       } else {
-        errorMsg.classList.add('show');
+        showError((data && data.message) ? data.message : 'Algo salió mal al enviar tu registro. Por favor intenta nuevamente.');
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtn;
       }
     } catch (err) {
-      errorMsg.classList.add('show');
+      showError('No se pudo conectar con el servidor. Verifica tu conexión e intenta de nuevo.');
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtn;
     }
