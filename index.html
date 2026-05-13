@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="es" style="background-color:#FAFAF7;color-scheme:light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0A2A5E">
+<title>CEM Negocios — Registro de miembro</title>
+<meta name="description" content="Grupo exclusivo de ventas y promociones para afiliados de CEMexicano San Luis Potosí.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:        #0A2A5E;
+    --navy-deep:   #061E47;
+    --navy-soft:   #1B4080;
+    --blue:        #1E6FBF;
+    --blue-light:  #4D8FCF;
+    --red:         #E63027;
+    --red-deep:    #C42018;
+    --red-soft:    #FFE8E6;
+    --green:       #16A34A;
+    --green-soft:  #DCFCE7;
+    --amber:       #D97706;
+    --amber-soft:  #FEF3C7;
+
+    --bg:          #FAFAF7;
+    --bg-soft:     #F2F1EC;
+    --bg-card:     #FFFFFF;
+    --ink:         #1A2333;
+    --ink-soft:    #4A5568;
+    --gray:        #6B7280;
+    --gray-light:  #D1D5DB;
+    --line:        #E5E5E0;
+
+    --font-display: 'Source Serif 4', Georgia, serif;
+    --font-body:    'Manrope', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; background: var(--bg); }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ============ NAV ============ */
+  nav {
+    padding: 18px 0;
+    background: white;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-logo-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .brand-logo-stack .top {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .brand-logo-stack .top .red { color: var(--red); }
+  .brand-logo-stack .bottom {
+    font-size: 10px;
+    color: var(--gray);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--gray-light);
+  }
+  .brand-product {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .brand-product .label {
+    font-size: 10px;
+    color: var(--gray);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand-product .name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+  }
+  @media (max-width: 540px) {
+    .brand-divider, .brand-product .label { display: none; }
+    .brand-product { display: none; }
+  }
+  .invite-tag {
+    background: var(--green-soft);
+    color: var(--green);
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .invite-tag::before { content: '✓'; font-size: 14px; }
+
+  /* ============ HEADER ============ */
+  .reg-header {
+    padding: 56px 0 32px;
+    text-align: center;
+  }
+  .reg-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+  .reg-header h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(32px, 4.8vw, 46px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+  .reg-header h1 em {
+    font-style: italic;
+    color: var(--blue);
+    font-weight: 500;
+  }
+  .reg-header .accent { color: var(--red); }
+  .reg-header > p {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  /* ============ PROPÓSITO CARD ============ */
+  .purpose-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--red);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 32px 0 48px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .purpose-card-icon {
+    width: 44px; height: 44px;
+    background: var(--red-soft);
+    border-radius: 10px;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .purpose-card-icon svg {
+    width: 22px; height: 22px;
+    stroke: var(--red-deep);
+    fill: none;
+    stroke-width: 2;
+  }
+  .purpose-card-content h3 {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .purpose-card-content p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  @media (max-width: 540px) {
+    .purpose-card { flex-direction: column; gap: 14px; padding: 20px; }
+  }
+
+  /* ============ REGLAS ============ */
+  .rules-section {
+    margin-bottom: 56px;
+  }
+  .rules-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .rules-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+  .rules-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.5vw, 32px);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 720px) {
+    .rules-grid { grid-template-columns: 1fr; }
+  }
+
+  .rule-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+  .rule-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+  }
+  .rule-card-num {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+  }
+  .rule-card:nth-child(1) .rule-card-num { background: var(--navy); }
+  .rule-card:nth-child(2) .rule-card-num { background: var(--blue); }
+  .rule-card:nth-child(3) .rule-card-num { background: var(--red); }
+  .rule-card:nth-child(4) .rule-card-num { background: var(--amber); }
+
+  .rule-card-content h3 {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+  .rule-card-content p {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .rule-card-content p strong {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .rule-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--amber-soft);
+    color: var(--amber);
+    padding: 3px 8px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  /* ============ DIVIDER ============ */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 36px;
+    color: var(--gray);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* ============ STEPS ============ */
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 0 0 36px;
+    flex-wrap: wrap;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    display: grid; place-items: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .step-line {
+    width: 40px;
+    height: 1.5px;
+    background: var(--line);
+    margin: 0 12px;
+  }
+  @media (max-width: 540px) {
+    .step-line { width: 16px; margin: 0 4px; }
+    .step span { font-size: 12px; }
+  }
+
+  /* ============ FORM CARD ============ */
+  .form-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(10, 42, 94, 0.06);
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+  .form-card::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--red) 0%, var(--blue) 50%, var(--navy) 100%);
+  }
+  .form-card-body { padding: 40px; }
+  @media (max-width: 540px) {
+    .form-card-body { padding: 28px 20px; }
+  }
+
+  .form-section-block { margin-bottom: 36px; }
+  .form-section-block:last-child { margin-bottom: 0; }
+  .form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .form-section-title h2 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .form-section-title-num {
+    background: var(--navy);
+    color: white;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .form-section-desc {
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin-bottom: 24px;
+    margin-left: 40px;
+  }
+
+  .field { margin-bottom: 20px; }
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 540px) {
+    .field-row { grid-template-columns: 1fr; gap: 0; }
+  }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .field label .req { color: var(--red); margin-left: 2px; }
+  .field label .optional {
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 12px;
+    margin-left: 4px;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: white;
+    border: 1.5px solid var(--gray-light);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(30, 111, 191, 0.12);
+  }
+  .field input::placeholder,
+  .field textarea::placeholder { color: var(--gray); }
+  .field textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.5;
+    font-family: var(--font-body);
+  }
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236B7280' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  .field-hint {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 6px;
+  }
+
+  /* ============ RADIO TIPO MIEMBRO ============ */
+  .radio-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  @media (max-width: 540px) {
+    .radio-cards { grid-template-columns: 1fr; }
+  }
+  .radio-card {
+    position: relative;
+    padding: 16px;
+    border: 2px solid var(--gray-light);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .radio-card:hover { border-color: var(--blue); }
+  .radio-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .radio-card.selected {
+    border-color: var(--navy);
+    background: rgba(10, 42, 94, 0.03);
+  }
+  .radio-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .radio-card-header h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .radio-card-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+  }
+  .radio-card.afiliado .radio-card-tag {
+    background: var(--green-soft);
+    color: var(--green);
+  }
+  .radio-card.invitado .radio-card-tag {
+    background: var(--amber-soft);
+    color: var(--amber);
+  }
+  .radio-card p {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  .radio-card .check-mark {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--gray-light);
+    background: white;
+    display: none;
+  }
+  .radio-card.selected .check-mark {
+    display: grid;
+    place-items: center;
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .radio-card.selected .check-mark::after {
+    content: '';
+    width: 5px; height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
+  }
+
+  /* ============ ACEPTACIÓN ============ */
+  .acceptance {
+    background: white;
+    border: 2px solid var(--gray-light);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .acceptance:hover { border-color: var(--blue); }
+  .acceptance.checked {
+    border-color: var(--green);
+    background: var(--green-soft);
+  }
+  .acceptance input[type="checkbox"] {
+    appearance: none;
+    width: 22px; height: 22px;
+    border: 2px solid var(--gray-light);
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 1px;
+    position: relative;
+    transition: all 0.15s ease;
+  }
+  .acceptance input[type="checkbox"]:checked {
+    background: var(--green);
+    border-color: var(--green);
+  }
+  .acceptance input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px; top: 2px;
+    width: 6px; height: 12px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+  }
+  .acceptance-text {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .acceptance-text strong { font-weight: 700; color: var(--navy); }
+
+  /* ============ SUBMIT ============ */
+  .submit-row {
+    text-align: center;
+    padding-top: 8px;
+  }
+  .submit-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 18px 48px;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .submit-btn:hover:not(:disabled) {
+    background: var(--navy-deep);
+    transform: translateY(-1px);
+  }
+  .submit-btn:disabled {
+    background: var(--gray-light);
+    color: var(--gray);
+    cursor: not-allowed;
+  }
+  .submit-btn svg { width: 18px; height: 18px; }
+  .submit-note {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 14px;
+  }
+
+  .form-msg {
+    display: none;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .form-msg.show { display: block; }
+  .form-msg.success {
+    background: var(--green-soft);
+    border: 1px solid var(--green);
+    color: #064E3B;
+  }
+  .form-msg.error {
+    background: var(--red-soft);
+    border: 1px solid var(--red);
+    color: var(--red-deep);
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.7);
+    padding: 32px 0;
+    text-align: center;
+    margin-top: 48px;
+  }
+  footer .accent-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  footer .accent-bar div {
+    width: 28px; height: 3px;
+    border-radius: 2px;
+  }
+  footer .accent-bar div:nth-child(1) { background: var(--red); }
+  footer .accent-bar div:nth-child(2) { background: var(--blue-light); margin: 0 4px; }
+  footer .accent-bar div:nth-child(3) { background: white; }
+  footer .meta {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  footer .meta strong { color: white; font-weight: 700; }
+</style>
+
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-logo-stack">
+        <div class="top">CEM<span class="red">exicano</span></div>
+        <div class="bottom">San Luis Potosí</div>
+      </div>
+      <div class="brand-divider"></div>
+      <div class="brand-product">
+        <div class="label">Grupo</div>
+        <div class="name">CEM Negocios</div>
+      </div>
+    </div>
+    <div class="invite-tag">Invitado</div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="reg-header">
+    <div class="reg-eyebrow">Registro al grupo</div>
+    <h1>Bienvenido a <span class="accent">CEM</span> <em>Negocios</em></h1>
+    <p>
+      El grupo exclusivo de ventas y promociones para afiliados al CEMexicano.
+      Promueve tus servicios, pide y da recomendaciones entre la red empresarial de San Luis.
+    </p>
+  </header>
+
+  <!-- PROPÓSITO -->
+
+  <div class="purpose-card">
+    <div class="purpose-card-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+    </div>
+    <div class="purpose-card-content">
+      <h3>La finalidad del grupo</h3>
+      <p>
+        Promover los servicios y productos que ofrecemos como afiliados, así como pedir
+        y dar recomendaciones entre nosotros. Es un espacio <strong>exclusivo de negocios</strong>,
+        no un canal social.
+      </p>
+    </div>
+  </div>
+
+  <!-- REGLAS DEL GRUPO -->
+
+  <section class="rules-section">
+    <div class="rules-header">
+      <div class="rules-eyebrow">Reglas del grupo</div>
+      <h2>Cuatro reglas para que el grupo funcione</h2>
+    </div>
+
+    <div class="rules-grid">
+
+      <article class="rule-card">
+        <div class="rule-card-num">1</div>
+        <div class="rule-card-content">
+          <h3>Horario de publicaciones</h3>
+          <p>De <strong>8:00 a 21:00 horas</strong>. Fuera de ese horario el grupo descansa.</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-card-num">2</div>
+        <div class="rule-card-content">
+          <h3>Negocios al privado</h3>
+          <p>Si inicias un negocio en este chat, <strong>da seguimiento y conclúyelo en privado</strong>.</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-card-num">3</div>
+        <div class="rule-card-content">
+          <h3>Solo negocios</h3>
+          <p>No se permiten <strong>memes, cadenas, noticias, temas religiosos ni políticos</strong>. El grupo es exclusivo de negocios.</p>
+        </div>
+      </article>
+
+      <article class="rule-card">
+        <div class="rule-card-num">4</div>
+        <div class="rule-card-content">
+          <span class="rule-tag">2 meses de prueba</span>
+          <h3>Invitados</h3>
+          <p>Si eres invitado y no afiliado, podrás participar <strong>durante dos meses</strong>. En ese tiempo puedes sumarte al CEMexicano para seguir dentro.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+  <div class="section-divider">
+    <span>Completa tu registro</span>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <span>Tus datos</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <span>Tu empresa</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <span>Aceptación</span>
+    </div>
+  </div>
+
+  <form id="registroForm" action="https://formspree.io/f/REEMPLAZAR_ID" method="POST">
+    <div class="form-card">
+      <div class="form-card-body">
+
+        <!-- 1. DATOS PERSONALES -->
+        <div class="form-section-block">
+          <div class="form-section-title">
+            <div class="form-section-title-num">1</div>
+            <h2>Datos del representante</h2>
+          </div>
+          <p class="form-section-desc">El contacto principal de la empresa en el grupo.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="nombre">Nombre completo<span class="req">*</span></label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="field">
+              <label for="cargo">Cargo<span class="req">*</span></label>
+              <input type="text" id="cargo" name="cargo" required placeholder="Director, fundador…">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email<span class="req">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="tu@empresa.com">
+            </div>
+            <div class="field">
+              <label for="whatsapp">WhatsApp<span class="req">*</span></label>
+              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="444 123 4567">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Tipo de miembro<span class="req">*</span></label>
+            <div class="radio-cards">
+
+              <label class="radio-card afiliado" id="radioAfiliado">
+                <input type="radio" name="tipo_miembro" value="Afiliado" required>
+                <div class="check-mark"></div>
+                <div class="radio-card-header">
+                  <h4>Afiliado al CEMexicano</h4>
+                  <span class="radio-card-tag">PERMANENTE</span>
+                </div>
+                <p>Soy miembro activo y pagado del CEMexicano.</p>
+              </label>
+
+              <label class="radio-card invitado" id="radioInvitado">
+                <input type="radio" name="tipo_miembro" value="Invitado" required>
+                <div class="check-mark"></div>
+                <div class="radio-card-header">
+                  <h4>Invitado</h4>
+                  <span class="radio-card-tag">2 MESES</span>
+                </div>
+                <p>Aún no soy afiliado, pero quiero conocer el grupo durante el periodo de prueba.</p>
+              </label>
+
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="referido_por">¿Quién te invitó al grupo?<span class="req">*</span></label>
+            <input type="text" id="referido_por" name="referido_por" required placeholder="Nombre completo o empresa de quien te refirió">
+            <div class="field-hint">Si no recuerdas el nombre exacto, escribe la empresa o cómo te enteraste.</div>
+          </div>
+        </div>
+
+        <!-- 2. DATOS EMPRESA -->
+        <div class="form-section-block">
+          <div class="form-section-title">
+            <div class="form-section-title-num">2</div>
+            <h2>Datos de la empresa</h2>
+          </div>
+          <p class="form-section-desc">Para que el resto del grupo sepa qué ofreces.</p>
+
+          <div class="field">
+            <label for="empresa">Nombre comercial o razón social<span class="req">*</span></label>
+            <input type="text" id="empresa" name="empresa" required placeholder="Mi Empresa S.A. de C.V.">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="giro">Giro / sector<span class="req">*</span></label>
+              <input type="text" id="giro" name="giro" required placeholder="Construcción, contabilidad…">
+            </div>
+            <div class="field">
+              <label for="web">Sitio web o red social <span class="optional">(opcional)</span></label>
+              <input type="text" id="web" name="web" placeholder="miempresa.com / @mi_empresa">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="oferta">¿Qué ofreces? Productos o servicios principales<span class="req">*</span></label>
+            <textarea id="oferta" name="oferta" required placeholder="Ej: Venta de cemento a granel, asesoría fiscal a PyMEs, sistemas de seguridad para oficinas…"></textarea>
+            <div class="field-hint">Esto será lo que tus compañeros del grupo vean cuando pidan referidos de tu giro.</div>
+          </div>
+
+          <div class="field">
+            <label for="cliente_ideal">¿Qué cliente buscas? <span class="optional">(opcional)</span></label>
+            <textarea id="cliente_ideal" name="cliente_ideal" placeholder="Ej: Constructoras con obra activa, empresas de 50+ empleados, restaurantes…"></textarea>
+          </div>
+        </div>
+
+        <!-- 3. ACEPTACIÓN -->
+        <div class="form-section-block">
+          <div class="form-section-title">
+            <div class="form-section-title-num">3</div>
+            <h2>Aceptación de las reglas</h2>
+          </div>
+          <p class="form-section-desc">Antes de entrar al grupo, confirma que leíste y aceptas las reglas.</p>
+
+          <label class="acceptance" for="acepta_reglas" id="wrap1">
+            <input type="checkbox" id="acepta_reglas" name="acepta_reglas" required value="acepto">
+            <span class="acceptance-text">
+              <strong>Acepto las cuatro reglas del grupo CEM Negocios:</strong>
+              respetar el horario de publicación (8:00–21:00), llevar negocios al privado,
+              no publicar memes, cadenas, noticias, temas religiosos ni políticos, y entiendo
+              que como invitado tengo dos meses para sumarme al CEMexicano.
+            </span>
+          </label>
+
+          <label class="acceptance" for="acepta_datos" id="wrap2">
+            <input type="checkbox" id="acepta_datos" name="acepta_datos" required value="acepto">
+            <span class="acceptance-text">
+              <strong>Autorizo el uso de mis datos.</strong> La información que comparto será
+              visible para los administradores y miembros del grupo, y se usará exclusivamente
+              para fines de operación de CEM Negocios.
+            </span>
+          </label>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-row">
+          <button type="submit" class="submit-btn" id="submitBtn" disabled>
+            Completar registro
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="submit-note">Recibirás el enlace al grupo de WhatsApp en menos de 24 horas.</p>
+
+          <div class="form-msg success" id="formSuccess">
+            <strong>¡Registro recibido!</strong> Te enviaremos el enlace al grupo de WhatsApp en menos de 24 horas.
+          </div>
+          <div class="form-msg error" id="formError">
+            Algo salió mal al enviar tu registro. Por favor intenta nuevamente.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</div>
+
+<footer>
+  <div class="container">
+    <div class="accent-bar">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="meta">
+      <strong>CEMexicano · San Luis Potosí</strong> · Grupo CEM Negocios
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('registroForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const cb1 = document.getElementById('acepta_reglas');
+  const cb2 = document.getElementById('acepta_datos');
+  const wrap1 = document.getElementById('wrap1');
+  const wrap2 = document.getElementById('wrap2');
+  const successMsg = document.getElementById('formSuccess');
+  const errorMsg = document.getElementById('formError');
+
+  const radioAfiliado = document.getElementById('radioAfiliado');
+  const radioInvitado = document.getElementById('radioInvitado');
+  const radioAfiliadoInput = radioAfiliado.querySelector('input');
+  const radioInvitadoInput = radioInvitado.querySelector('input');
+
+  function updateRadios() {
+    if (radioAfiliadoInput.checked) {
+      radioAfiliado.classList.add('selected');
+      radioInvitado.classList.remove('selected');
+    } else if (radioInvitadoInput.checked) {
+      radioInvitado.classList.add('selected');
+      radioAfiliado.classList.remove('selected');
+    }
+  }
+  radioAfiliado.addEventListener('click', () => { radioAfiliadoInput.checked = true; updateRadios(); });
+  radioInvitado.addEventListener('click', () => { radioInvitadoInput.checked = true; updateRadios(); });
+
+  function updateButton() {
+    if (cb1.checked) wrap1.classList.add('checked'); else wrap1.classList.remove('checked');
+    if (cb2.checked) wrap2.classList.add('checked'); else wrap2.classList.remove('checked');
+    submitBtn.disabled = !(cb1.checked && cb2.checked);
+  }
+  cb1.addEventListener('change', updateButton);
+  cb2.addEventListener('change', updateButton);
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successMsg.classList.remove('show');
+    errorMsg.classList.remove('show');
+
+    const formData = new FormData(form);
+    const action = form.getAttribute('action');
+
+    if (action.includes('REEMPLAZAR_ID')) {
+      console.log('Datos del registro (modo demo):', Object.fromEntries(formData.entries()));
+      successMsg.innerHTML = '<strong>Modo demo activo.</strong> Configura tu ID de Formspree en el atributo action del &lt;form&gt; para recibir los registros por email.';
+      successMsg.classList.add('show');
+      form.reset();
+      updateButton();
+      updateRadios();
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    submitBtn.disabled = true;
+    const originalBtn = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Enviando…';
+
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMsg.classList.add('show');
+        form.reset();
+        updateButton();
+        radioAfiliado.classList.remove('selected');
+        radioInvitado.classList.remove('selected');
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        errorMsg.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtn;
+      }
+    } catch (err) {
+      errorMsg.classList.add('show');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtn;
+    }
+  });
+</script>
+
+</body>
+</html>
